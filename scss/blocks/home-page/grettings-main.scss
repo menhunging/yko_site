@@ -1,0 +1,188 @@
+.grettings-main {
+  position: relative;
+  height: 893px;
+  padding: 102px 0;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  overflow: hidden;
+
+  @include responsive1549 {
+    padding: 50px 0;
+    height: 630px;
+  }
+
+  @include responsive767 {
+    height: 552px;
+    padding: 40px 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .grettings-main__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.grettings-slider {
+  overflow: visible;
+  height: 700px;
+
+  @media (max-width: 1800px) {
+    padding: 0 90px;
+  }
+
+  @include responsive1549 {
+    height: 530px;
+  }
+
+  @include responsive767 {
+    height: 472px;
+  }
+
+  @include responsive767 {
+    padding: 0;
+  }
+
+  .swiper-slide {
+    overflow: visible;
+    height: auto;
+    transition: opacity 0.3s;
+    opacity: 0;
+
+    @include responsive767 {
+      opacity: 1;
+    }
+
+    &.swiper-slide-active,
+    &.swiper-slide-next {
+      opacity: 1;
+    }
+
+    &:nth-child(2n) {
+      margin-top: auto;
+
+      @include responsive1549 {
+        transform: translateX(-50px);
+      }
+
+      @include responsive1023 {
+        transform: translateX(-20px);
+      }
+
+      @include responsive767 {
+        width: 100%;
+        transform: initial;
+        margin: 0;
+      }
+
+      .grettings-item {
+        width: 506px;
+        margin-left: auto;
+
+        @include responsive767 {
+          width: 100%;
+        }
+
+        &::before {
+          bottom: auto;
+          top: -17px;
+
+          @include responsive767 {
+            right: 0px;
+            top: -5px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.grettings-item {
+  padding: 26px 35px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 11px;
+  border-radius: 50px;
+  position: relative;
+  z-index: 2;
+
+  @include responsive767 {
+    padding: 20px;
+  }
+
+  @include after {
+    background-color: $colorBlack-a3;
+    backdrop-filter: blur(13px);
+    border-top: solid 2px $colorWhite;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50px;
+  }
+
+  @include before {
+    width: 56px;
+    height: 56px;
+    right: -16px;
+    bottom: -17px;
+    z-index: -1;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='28' cy='28' r='28' fill='%23F59E11'/%3e%3ccircle cx='28' cy='28' r='6' fill='white'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+    @include responsive767 {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='17.5022' cy='17.5022' r='17.5022' fill='%23F59E11'/%3e%3ccircle cx='17.5019' cy='17.5022' r='3.75046' fill='white'/%3e%3c/svg%3e ");
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      right: 0px;
+      top: -5px;
+    }
+  }
+
+  .grettings-item__title {
+    font-weight: 400;
+    font-size: 39px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: $colorWhite;
+
+    @include responsive1549 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    @include responsive767 {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+
+  .grettings-item__text {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+    color: $colorWhite;
+
+    @include responsive1549 {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  .btn {
+    margin-top: 8px;
+    width: auto;
+    padding-bottom: 11px;
+    min-width: 194px;
+  }
+}

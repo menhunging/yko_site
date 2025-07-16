@@ -1,0 +1,283 @@
+.footer {
+  padding: 55px 0;
+
+  @include responsive1199 {
+    padding: 30px 0;
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 145px 1fr 1fr;
+    gap: 0 87px;
+
+    @include responsive1549 {
+      gap: 0 35px;
+      grid-template-columns: 145px 55% 1fr;
+    }
+
+    @include responsive1023 {
+      grid-template-columns: 145px 50% 1fr;
+    }
+
+    @include responsive767 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 25px;
+    }
+  }
+
+  .logo {
+  }
+
+  .copyText {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $colorGray;
+    margin-top: 17px;
+    display: block;
+
+    @include responsive767 {
+      margin-top: 14px;
+    }
+  }
+
+  .thisYear {
+  }
+}
+
+.footer-col {
+  &.footer-logo {
+    margin-bottom: -60px;
+  }
+
+  &.footer-col__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-column: 2/4;
+
+    @include responsive1549 {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+
+    @include responsive767 {
+      margin-top: 10px;
+      margin-bottom: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &.footer-col__menu {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    @include responsive1023 {
+      grid-column: 1 / 3;
+    }
+
+    @include responsive767 {
+      width: 100%;
+    }
+  }
+
+  &.footer-col__data {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    text-align: right;
+    padding-top: 120px;
+    color: $colorGray;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include responsive1023 {
+      grid-column: 1 / 4;
+      grid-row: 3 / 3;
+      padding-top: 70px;
+      text-align: left;
+    }
+
+    @include responsive767 {
+      padding-top: 0;
+      text-align: right;
+    }
+
+    @include responsive389 {
+      width: 120px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    p {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &.footer-col__social {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 13px;
+
+    @include responsive767 {
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 26px;
+      @include text-decoration-hover($colorBlack);
+      transition: all 0.3s;
+
+      @include responsive1199 {
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      @include responsive767 {
+        font-size: 25px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  &.footer-bottom {
+    grid-row: 4/4;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    @include responsive1549 {
+      margin-top: 60px;
+    }
+
+    @include responsive767 {
+      flex-direction: column;
+      gap: 12px;
+      font-size: 16px;
+      line-height: 18px;
+      margin-top: 0;
+    }
+
+    a {
+      color: $colorGray;
+      @include text-decoration-hover($colorGray);
+    }
+  }
+}
+
+a.footer__text {
+  @include hover {
+    background-color: $colorBlack;
+    color: $colorWhite;
+  }
+}
+
+.footer__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  border: solid 1px $colorBlack;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 22px 7px;
+  transition: all 0.3s;
+
+  @include responsive1199 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include responsive767 {
+    width: auto;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 4px 17px 7px;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+}
+
+.social {
+  .social__link {
+  }
+
+  .social__link--telegram {
+  }
+
+  .social__link--phone {
+  }
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px 50px;
+
+  @include responsive767 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+  }
+
+  a {
+    @include text-decoration-hover($colorBlack);
+  }
+
+  .footer-menu__sub {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px 0;
+    width: 100%;
+    margin-top: 14px;
+
+    @include responsive767 {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      display: none;
+    }
+
+    li {
+      width: calc(100% / 3);
+
+      @include responsive767 {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    a {
+      color: $colorGray;
+      @include text-decoration-hover($colorGray);
+    }
+  }
+
+  & > li:last-child {
+    width: 100%;
+  }
+}
+
+.develop-block {
+  color: $colorGray;
+}

@@ -1,0 +1,99 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  position: relative;
+  color: $colorBlack;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  transition: all 0.3s;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 5px 7px;
+  border-radius: 50px;
+  font-variant-ligatures: none;
+  font-family: $fontMain;
+  width: 100%;
+  height: 46px;
+
+  @include responsive1549 {
+  }
+
+  @include responsive1199 {
+  }
+
+  @include responsive1023 {
+  }
+
+  @include responsive767 {
+  }
+
+  &--orange {
+    background-color: $colorYellow;
+    color: $colorWhite;
+
+    @include hover {
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.btn-chat {
+  padding-right: 25px;
+
+  @include before {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='15' viewBox='0 0 17 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M16.8982 5.04725C16.4354 2.20983 13.9844 0.045012 11.1969 0.0121908C9.42477 -0.00861143 7.62527 0.00155853 6.03786 0.0108039C5.65504 0.0131153 5.26728 0.0463988 4.88582 0.110192C2.61005 0.490641 0.669924 2.37532 0.167144 4.69315C0.119068 4.9155 0.0831227 5.14663 0.048975 5.36991C0.0332491 5.473 0.0170739 5.57655 0 5.67917V6.55379C0.00179725 6.56026 0.0035945 6.56627 0.00539174 6.57274C0.0139287 6.60232 0.0238135 6.63607 0.027408 6.67398C0.147824 8.01133 0.648357 9.19335 1.51553 10.1868C2.49997 11.3147 3.71087 11.9785 5.11497 12.1588C5.55889 12.2157 6.02033 12.2198 6.4665 12.2235C6.63005 12.2249 6.79899 12.2263 6.96524 12.2305C7.4797 12.243 7.80096 12.5716 7.8032 13.0884C7.80455 13.3755 7.8041 13.6626 7.8041 13.9497C7.8041 14.1008 7.8041 14.252 7.8041 14.4031C7.8041 14.6005 7.87374 14.754 8.01618 14.8719C8.22421 15.0439 8.45695 15.0425 8.72834 14.8691L9.38793 14.4475C10.1257 13.976 10.8886 13.4883 11.6372 13.0066L11.8861 12.8467C12.8063 12.2559 13.7575 11.6448 14.6193 10.937C15.4882 10.2233 16.0404 9.57288 16.4093 8.82862C16.9687 7.69929 17.1287 6.46179 16.8982 5.04725ZM5.41286 4.54568C5.49509 4.30022 5.70357 4.15922 5.98394 4.15922C6.51727 4.15876 7.05016 4.15876 7.58349 4.15876C7.89396 4.15876 8.20444 4.15876 8.51446 4.15876H9.44499H9.91407C10.2785 4.1583 10.6429 4.1583 11.0072 4.15922C11.1892 4.15969 11.3501 4.22348 11.4611 4.33858C11.5621 4.44352 11.6147 4.58266 11.6134 4.74076C11.6107 5.07591 11.3627 5.31028 11.0108 5.3112C10.407 5.31259 9.80264 5.31213 9.19876 5.31166H8.49065C8.23903 5.3112 7.98787 5.31213 7.73625 5.31213C7.15215 5.31305 6.54827 5.31351 5.95428 5.31028C5.76018 5.30935 5.58809 5.21967 5.48116 5.06435C5.37737 4.91411 5.35265 4.72504 5.41286 4.54568ZM11.3227 8.00301C11.2319 8.04923 11.1272 8.07604 11.0356 8.07604C9.17315 8.08205 7.3458 8.08067 5.96192 8.07882C5.63168 8.07835 5.38231 7.8315 5.38186 7.50422C5.38141 7.17693 5.62988 6.92869 5.95967 6.92776C6.31238 6.92638 6.66869 6.92638 7.0223 6.92638C7.27167 6.92638 7.52014 6.92638 7.76456 6.92684C8.00854 6.92684 8.25251 6.9273 8.49649 6.9273C8.74361 6.9273 8.99028 6.9273 9.23696 6.92684C9.8314 6.92638 10.4461 6.92591 11.0499 6.92823C11.3227 6.92915 11.5329 7.10065 11.5985 7.3757C11.6587 7.62718 11.5428 7.89067 11.3227 8.00301Z' fill='white'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border: solid 1px $colorWhite;
+    top: 3px;
+  }
+
+  @include hover {
+    background-color: $colorBlack;
+  }
+}
+
+// .btn-download {
+//   font-size: 16px;
+//   font-family: $fontMain;
+//   height: 50px;
+//   border-radius: 12px;
+//   display: flex;
+//   justify-content: center;
+//   gap: 12px;
+//   background-color: $colorBlack-a2;
+//   border-color: transparent;
+//   padding: 0 20px;
+
+//   @include hover {
+//     background-color: $colorOrange;
+//     color: $colorWhite;
+//   }
+
+//   @include before {
+//     position: relative;
+//     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.66669 18.3337H18.3334M10 12.0837V1.66699M10 12.0837L14.1667 7.91699M10 12.0837L5.83335 7.91699' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+//     background-position: left center;
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     width: 16px;
+//     height: 16px;
+//   }
+// }

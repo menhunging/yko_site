@@ -1,0 +1,354 @@
+.our-villages-main {
+  overflow: hidden;
+  position: relative;
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='405' height='397' viewBox='0 0 405 397' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M155.611 75.0967L154.571 76.8398L31.5508 3.4873L31.1611 3.25488L30.7744 3.49121L-90.3926 77.8076L-215.034 3.4873L-215.424 3.25488L-215.81 3.49121L-336.978 77.8076L-461.618 3.4873L-462.008 3.25488L-462.395 3.49121L-581.909 76.7842L-582.968 75.0654L-462.016 0.875977L-337.374 75.1973L-336.984 75.4297L-336.598 75.1924L-215.431 0.875977L-90.7891 75.1973L-90.3994 75.4297L-90.0127 75.1924L31.1533 0.875977L155.611 75.0967Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M155.611 138.924L154.571 140.667L31.5508 67.3145L31.1611 67.082L30.7744 67.3184L-90.3926 141.635L-215.034 67.3145L-215.424 67.082L-215.81 67.3184L-336.978 141.635L-461.618 67.3145L-462.008 67.082L-462.395 67.3184L-581.909 140.611L-582.968 138.893L-462.016 64.7031L-337.374 139.024L-336.984 139.257L-336.598 139.02L-215.431 64.7031L-90.7891 139.024L-90.3994 139.257L-90.0127 139.02L31.1533 64.7031L155.611 138.924Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M403.971 266.577L402.931 268.32L279.91 194.968L279.521 194.735L279.134 194.972L157.967 269.288L33.3252 194.968L32.9355 194.735L32.5488 194.972L-89.4873 269.82L-215.033 194.968L-215.423 194.735L-215.81 194.972L-335.324 268.265L-336.383 266.546L-215.431 192.357L-89.9014 267.21L-89.5117 267.443L-89.125 267.205L32.9277 192.357L157.57 266.678L157.96 266.91L158.347 266.673L279.513 192.357L403.971 266.577Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M155.611 202.75L154.571 204.493L31.5508 131.141L31.1611 130.908L30.7754 131.145L-90.3926 205.461L-215.033 131.141L-215.423 130.908L-215.81 131.145L-335.324 204.438L-336.383 202.719L-215.431 128.529L-90.7891 202.851L-90.3994 203.083L-90.0127 202.846L31.1543 128.529L155.611 202.75Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M403.969 330.404L402.929 332.148L279.909 258.795L279.519 258.563L279.134 258.799L157.966 333.115L33.325 258.795L32.9353 258.563L32.5486 258.799L-86.9661 332.092L-88.0247 330.373L32.9275 256.184L157.569 330.505L157.959 330.737L158.345 330.5L279.512 256.184L403.969 330.404Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M403.97 394.231L402.93 395.975L279.91 322.621L279.52 322.389L279.134 322.625L159.619 395.918L158.56 394.199L279.512 320.01L403.97 394.231Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 989px;
+    height: 397px;
+    left: -300px;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.our-villages-main__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+
+  @include responsive1199 {
+    gap: 20px;
+  }
+
+  @include responsive1023 {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .caption {
+    @include responsive1023 {
+      width: 100%;
+    }
+  }
+}
+
+.our-villages-main__body {
+  margin-top: 32px;
+
+  @include responsive767 {
+    margin-top: 24px;
+  }
+}
+
+.our-villages-slider {
+  overflow: visible;
+  position: relative;
+
+  .swiper-slide {
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 13px;
+    opacity: 0.15;
+    backdrop-filter: blur(16px);
+    transition: all 0.3s;
+
+    @include responsive1549 {
+      border: solid 1px $colorBlack;
+      background-color: $colorWhite;
+    }
+
+    @include before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='738' height='699' viewBox='0 0 738 699' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cforeignObject x='-16.8568' y='-16.8568' width='771.714' height='732.714'%3e%3cdiv xmlns='http://www.w3.org/1999/xhtml' style='backdrop-filter:blur(8.43px);clip-path:url(%23bgblur_0_124_651_clip_path);height:100%25;width:100%25'%3e%3c/div%3e%3c/foreignObject%3e%3crect data-figma-bg-blur-radius='16.8568' x='0.5' y='0.5' width='737' height='698' rx='49.5' fill='white' stroke='url(%23paint0_linear_124_651)'/%3e%3cdefs%3e%3cclipPath id='bgblur_0_124_651_clip_path' transform='translate(16.8568 16.8568)'%3e%3crect x='0.5' y='0.5' width='737' height='698' rx='49.5'/%3e%3c/clipPath%3e%3clinearGradient id='paint0_linear_124_651' x1='311.396' y1='-23.8296' x2='266.473' y2='696.197' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23212121'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      top: -13px;
+      left: 0;
+      z-index: -1;
+
+      @include responsive1549 {
+        display: none;
+      }
+    }
+
+    &.swiper-slide-next,
+    &.swiper-slide-active {
+      opacity: 1;
+      backdrop-filter: blur(0px);
+    }
+
+    p {
+      max-width: 473px;
+    }
+  }
+
+  .picture-block {
+    width: 100%;
+    height: 431px;
+    border-radius: 40px;
+    overflow: hidden;
+
+    @include responsive1549 {
+      height: 260px;
+    }
+
+    @include responsive1199 {
+      height: 170px;
+    }
+
+    @include responsive767 {
+      height: auto;
+      padding-top: calc(200 / 335 * 100%);
+    }
+  }
+
+  .our-villages-slider-content {
+    padding: 24px 30px;
+
+    @include responsive1549 {
+      padding: 20px 20px;
+    }
+
+    @include responsive1199 {
+      padding: 15px;
+    }
+
+    @include responsive1023 {
+      padding: 15px 0;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .our-villages-slider-content__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 17px;
+
+    @include responsive1199 {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .caption {
+      text-transform: uppercase;
+      width: 70%;
+
+      @include responsive1549 {
+        width: 60%;
+      }
+
+      @include responsive1199 {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      @include responsive1199 {
+      }
+    }
+
+    p {
+      width: 100%;
+      color: $colorGray;
+    }
+  }
+
+  .our-villages-slider-content__count {
+    border: solid 1px #212121;
+    border-radius: 30px;
+    width: 175px;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 15px;
+    height: 45px;
+
+    @include responsive1199 {
+      order: -1;
+      width: auto;
+      gap: 20px;
+    }
+  }
+
+  .our-villages-slider-content__title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .our-villages-slider-content__data {
+    font-weight: 400;
+    font-size: 33px;
+    line-height: 33px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+
+    @include responsive1549 {
+      position: relative;
+      top: -3px;
+    }
+
+    @include responsive1199 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .our-villages-slider__info {
+    display: flex;
+    gap: 105px;
+    margin-top: 24px;
+
+    @include responsive1549 {
+      gap: 60px;
+    }
+
+    @include responsive1199 {
+      gap: 20px;
+    }
+
+    @include responsive1023 {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    @include responsive767 {
+      flex-direction: row;
+      gap: 30px;
+      margin-top: 16px;
+    }
+
+    @include responsive389 {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    li {
+      background-position: left center;
+      background-repeat: no-repeat;
+      min-height: 50px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-left: 66px;
+
+      @include responsive767 {
+        background-size: 32px;
+        padding-left: 45px;
+        min-height: 40px;
+      }
+    }
+
+    li.date {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='25' cy='25' r='24.3056' stroke='%23212121' stroke-width='1.38889'/%3e%3cpath d='M34.5626 20.6199C34.4759 19.0585 33.7366 17.9191 32.3669 17.2341C31.8901 16.9954 31.3504 16.8785 30.7528 16.8805C30.5274 16.8815 30.3009 16.8815 30.0725 16.8815H29.5637V16.4595C29.5637 16.3033 29.5637 16.1603 29.5637 16.0162C29.5637 15.7664 29.4929 15.5589 29.3642 15.431C29.2614 15.3282 29.1277 15.2738 28.9641 15.2788C28.596 15.2819 28.3766 15.5528 28.3756 16.0041C28.3756 16.1512 28.3756 16.2993 28.3756 16.4464V16.8685H21.6248L21.6258 16.4242C21.6268 16.2519 21.6268 16.0827 21.6248 15.9145C21.6188 15.5438 21.3694 15.2778 21.0303 15.2778C21.0273 15.2778 21.0243 15.2778 21.0213 15.2778C20.6881 15.2819 20.4417 15.5478 20.4367 15.9105C20.4337 16.0787 20.4347 16.2469 20.4357 16.4242L20.4367 16.8815H20.2372C20.1095 16.8815 19.9868 16.8815 19.8661 16.8805C19.7513 16.8805 19.6386 16.8795 19.5279 16.8795C19.3962 16.8795 19.2655 16.8805 19.1358 16.8815C17.4409 16.9067 15.9445 18.1055 15.5774 19.7334C15.4477 20.3035 15.4208 20.917 15.3939 21.5104L15.3849 21.7098C15.2183 25.2658 15.2462 28.8611 15.4667 32.3969C15.5754 34.1447 16.9052 35.6305 18.5582 35.8521C19.479 35.976 20.4327 36.0073 21.3555 36.0385C21.5131 36.0435 21.6707 36.0486 21.8283 36.0546C24.7992 36.1614 27.8857 36.1171 31.0042 35.9206C32.6792 35.8149 34.0848 34.6201 34.422 33.0144C34.5447 32.4291 34.5726 31.8056 34.6006 31.2012L34.6115 30.9584C34.7741 27.5857 34.7572 24.1073 34.5626 20.6199ZM22.0209 30.7065C22.0199 30.9735 21.9151 31.2253 21.7256 31.4137C21.538 31.6011 21.2906 31.7038 21.0283 31.7038C21.0243 31.7038 21.0203 31.7038 21.0173 31.7038C20.4776 31.6978 20.0387 31.2475 20.0407 30.7005C20.0417 30.4336 20.1464 30.1827 20.3359 29.9933C20.5235 29.806 20.7719 29.7032 21.0343 29.7032C21.0382 29.7032 21.0412 29.7032 21.0452 29.7032C21.5839 29.7103 22.0219 30.1596 22.0209 30.7065ZM21.0323 27.6966H21.0313C20.7669 27.6966 20.5185 27.5918 20.33 27.4004C20.1414 27.209 20.0387 26.9551 20.0407 26.6872C20.0446 26.1412 20.4876 25.6969 21.0293 25.6959H21.0303C21.2956 25.6959 21.544 25.8007 21.7316 25.9911C21.9201 26.1825 22.0229 26.4353 22.0209 26.7043C22.0169 27.2513 21.574 27.6955 21.0323 27.6966ZM25.699 31.4107C25.5115 31.6001 25.2631 31.7038 24.9997 31.7038C24.9977 31.7038 24.9957 31.7038 24.9947 31.7038C24.454 31.7008 24.0121 31.2545 24.0101 30.7086C24.0091 30.4406 24.1128 30.1888 24.3014 29.9974C24.4889 29.808 24.7373 29.7042 25.0017 29.7042C25.0037 29.7042 25.0047 29.7042 25.0067 29.7042C25.5474 29.7072 25.9883 30.1535 25.9903 30.6995C25.9913 30.9675 25.8876 31.2203 25.699 31.4107ZM25.701 27.4004C25.5135 27.5918 25.2641 27.6966 24.9997 27.6966H24.9987C24.457 27.6955 24.0141 27.2513 24.0101 26.7053C24.0081 26.4364 24.1108 26.1835 24.2994 25.9921C24.4869 25.8017 24.7363 25.6959 25.0007 25.6959H25.0017C25.5424 25.6969 25.9863 26.1412 25.9903 26.6862C25.9923 26.9561 25.8896 27.209 25.701 27.4004ZM28.9751 31.7038C28.9731 31.7038 28.9711 31.7038 28.9701 31.7038C28.7068 31.7038 28.4584 31.6001 28.2708 31.4107C28.0813 31.2203 27.9785 30.9675 27.9785 30.6995C27.9795 30.4325 28.0843 30.1817 28.2748 29.9933C28.4624 29.807 28.7098 29.7042 28.9721 29.7042C28.9761 29.7042 28.9801 29.7042 28.9851 29.7042C29.5248 29.7113 29.9617 30.1616 29.9607 30.7086C29.9577 31.2545 29.5158 31.7008 28.9751 31.7038ZM28.9691 27.6966C28.7038 27.6966 28.4544 27.5908 28.2668 27.3994C28.0783 27.207 27.9755 26.9531 27.9785 26.6842C27.9835 26.1392 28.4274 25.6959 28.9691 25.6959C28.9691 25.6959 28.9691 25.6959 28.9701 25.6959C29.2355 25.6959 29.4839 25.8017 29.6714 25.9931C29.859 26.1845 29.9617 26.4384 29.9597 26.7083C29.9548 27.2533 29.5098 27.6966 28.9691 27.6966ZM16.6299 21.6786L16.6199 21.4872C16.567 20.4526 16.6608 19.2922 17.7592 18.5356C18.1771 18.2475 18.643 18.0954 19.1458 18.0833C19.3912 18.0773 19.6336 18.0793 19.889 18.0803C20.0027 18.0813 20.1185 18.0813 20.2372 18.0813H20.4367L20.4357 18.5336C20.4347 18.7079 20.4347 18.8761 20.4367 19.0443C20.4417 19.4181 20.6951 19.687 21.0373 19.682C21.3714 19.678 21.6179 19.413 21.6238 19.0504C21.6268 18.8812 21.6258 18.7119 21.6248 18.5387C21.6248 18.4591 21.6238 18.3775 21.6238 18.2959V18.0944H28.3736V18.5175C28.3736 18.6787 28.3726 18.8419 28.3736 19.0041C28.3756 19.407 28.612 19.68 28.9612 19.683C29.1218 19.686 29.2614 19.6306 29.3672 19.5259C29.4919 19.402 29.5607 19.2146 29.5617 18.996C29.5627 18.8419 29.5627 18.6877 29.5617 18.5346V18.171L29.7083 18.1307C31.2676 17.6995 32.8548 18.5094 33.2458 19.9359C33.3376 20.2733 33.3655 20.6289 33.3915 20.9734C33.4034 21.1306 33.4164 21.2938 33.4344 21.454L33.4603 21.6786H16.6299Z' fill='%23212121'/%3e%3c/svg%3e ");
+    }
+    li.price {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='25' cy='25' r='24.3056' stroke='%23212121' stroke-width='1.38889'/%3e%3cg clip-path='url(%23clip0_124_668)'%3e%3cpath d='M27.2684 20.508C27.1288 20.4377 26.9596 20.397 26.8034 20.3952C25.6757 20.3857 24.548 20.39 23.4211 20.3909C23.3335 20.3909 23.245 20.3996 23.147 20.4048C23.147 21.8752 23.147 23.3265 23.147 24.8099C24.4439 24.8099 25.7078 24.8186 26.9709 24.8004C27.1556 24.7977 27.3682 24.7041 27.5191 24.5887C29.0702 23.4002 28.7796 21.2688 27.2684 20.508Z' fill='black'/%3e%3cpath d='M25 13C18.3724 13 13 18.3724 13 25C13 31.6276 18.3724 37 25 37C31.6276 37 37 31.6276 37 25C37 18.3724 31.6276 13 25 13ZM27.5409 26.0939C27.3839 26.1538 27.206 26.1824 27.0377 26.1841C25.8458 26.1919 24.6539 26.1885 23.4628 26.1885C23.3648 26.1885 23.2668 26.1885 23.1505 26.1885C23.1505 26.5528 23.1505 26.8929 23.1505 27.2702C23.2589 27.2702 23.3561 27.2702 23.4524 27.2702C24.6443 27.2746 25.8363 27.278 27.0273 27.285C27.4836 27.2876 27.7838 27.5296 27.8167 27.9104C27.8566 28.3624 27.5391 28.6782 27.0325 28.6764C26.4409 28.6747 25.8501 28.6617 25.2585 28.6591C24.5602 28.6556 23.8627 28.6582 23.1306 28.6582C23.1306 28.9636 23.1306 29.2516 23.1306 29.5404C23.1306 29.7859 23.1349 30.0323 23.1288 30.2778C23.1175 30.7133 22.8417 31.0004 22.4426 31.0004C22.0471 31.0004 21.7591 30.7055 21.7538 30.2778C21.7478 29.8319 21.7521 29.386 21.7521 28.9401C21.7521 28.8508 21.7521 28.7623 21.7521 28.6391C21.4693 28.6391 21.2082 28.6435 20.9471 28.6383C20.5029 28.6296 20.1924 28.3433 20.188 27.9469C20.1846 27.5504 20.4943 27.2615 20.9393 27.2537C21.2004 27.2485 21.4624 27.2529 21.7374 27.2529C21.7374 26.8955 21.7374 26.5624 21.7374 26.1893C21.5665 26.1893 21.3973 26.1893 21.229 26.1893C20.3876 26.1893 20.0657 26.002 20.0605 25.5075C20.0553 25.0061 20.3849 24.8126 21.242 24.8126C21.3964 24.8126 21.5509 24.8126 21.7521 24.8126C21.7521 24.6964 21.7521 24.5931 21.7521 24.489C21.7521 22.9414 21.7512 21.3947 21.7521 19.8471C21.7521 19.2503 21.9959 19.0056 22.6005 19.0048C24.0744 19.003 25.5483 19.0004 27.0221 19.0082C27.1991 19.0091 27.3865 19.0421 27.5522 19.1054C28.987 19.6589 29.9412 21.0642 29.9404 22.604C29.9386 24.1394 28.9783 25.5448 27.5409 26.0939Z' fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_124_668'%3e%3crect width='24' height='24' fill='white' transform='translate(13 13)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+    }
+  }
+
+  .our-villages-slider__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $colorGray;
+
+    @include responsive767 {
+      font-size: 9px;
+      line-height: 12px;
+    }
+  }
+
+  .our-villages-slider__data {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 32px;
+
+    @include responsive1199 {
+      font-size: 19px;
+      line-height: 24px;
+    }
+  }
+}
+
+.our-villages-count {
+  border: solid 1px $colorBlack;
+  border-radius: 30px;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  padding: 26px 23px 26px 80px;
+  position: relative;
+  min-width: 285px;
+  width: auto;
+  margin-left: auto;
+  background-color: $colorWhite;
+
+  @include responsive1549 {
+    padding: 12px 13px 16px 70px;
+  }
+
+  @include responsive1023 {
+    margin-left: 0;
+  }
+
+  @include responsive767 {
+    min-width: 235px;
+  }
+
+  .our-villages-count__icon {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='37' height='36' viewBox='0 0 37 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.0149287 22.1932C0.0149287 20.1965 0.0261777 18.1998 0.011554 16.2031C-0.00644445 13.6046 0.971096 11.4931 2.98917 9.83953C6.13215 7.26463 9.25151 4.66273 12.3844 2.07657C15.7343 -0.688439 20.2643 -0.694063 23.621 2.07095C26.8225 4.70772 30.0206 7.34675 33.2086 9.99927C34.9803 11.474 35.9533 13.3864 35.9758 15.689C36.0186 20.1178 36.0355 24.5476 35.9635 28.9753C35.9106 32.2442 33.4662 35.1184 30.2883 35.8304C29.772 35.9463 29.2309 35.9778 28.7 35.989C27.5897 36.0127 26.4783 36.0014 25.368 35.9947C23.1227 35.9823 21.6221 34.4794 21.6142 32.2296C21.6074 30.4016 21.6119 28.5737 21.6131 26.7457C21.6142 25.749 21.3948 24.8165 20.7626 24.0234C19.8965 22.9357 18.7626 22.4058 17.3823 22.6837C15.8772 22.9863 14.9626 23.9908 14.5599 25.4453C14.4384 25.8852 14.4092 26.361 14.4047 26.8211C14.3878 28.6063 14.4013 30.3926 14.3968 32.1779C14.3912 34.5019 12.8973 35.989 10.5654 35.9947C9.48324 35.9969 8.39996 35.98 7.3178 35.998C3.30077 36.0644 0.189289 32.7471 0.0430513 28.9415C-0.0435663 26.6951 0.0273026 24.443 0.0273026 22.1932C0.0239279 22.1932 0.0194283 22.1932 0.0149287 22.1932Z' fill='black'/%3e%3c/svg%3e ");
+    width: 36px;
+    height: 36px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 23px;
+    transform: translateY(-50%);
+
+    @include responsive1549 {
+      left: 20px;
+    }
+  }
+
+  .our-villages-count__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    @include responsive767 {
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+
+  .our-villages-count__count {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+
+    @include responsive1549 {
+      font-size: 24px;
+      line-height: 22px;
+    }
+
+    @include responsive767 {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+}
