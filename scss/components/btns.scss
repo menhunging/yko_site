@@ -44,6 +44,13 @@
     }
   }
 
+  &--dark {
+    background-color: $colorWhite;
+    border: solid 1px $colorBlack;
+    color: $colorBlack;
+    
+  }
+
   &:disabled {
     opacity: 0.5;
     pointer-events: none;

@@ -1,0 +1,86 @@
+.adv-main {
+  position: relative;
+
+  @include before {
+    background-color: $colorGrayLight;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 50px);
+    z-index: -1;
+  }
+
+  .adv-main__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+
+    @include responsive1549 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    @include responsive767 {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  .adv-main__item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $colorGray;
+
+    @include responsive1199 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      gap: 20px;
+      font-size: 16px;
+    }
+  }
+
+  .adv-main__name {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 40px;
+    color: $colorBlack;
+    margin-top: 10px;
+
+    @include responsive1549 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    @include responsive1199 {
+      font-size: 25px;
+      line-height: 30px;
+      margin-top: 0;
+      max-width: 50%;
+    }
+
+    @include responsive1023 {
+      max-width: 75%;
+    }
+
+    @include responsive767 {
+      font-size: 20px;
+      line-height: 25px;
+      max-width: 100%;
+    }
+  }
+
+  p {
+    margin-top: -10px;
+
+    @include responsive767 {
+      margin: 0;
+    }
+  }
+}

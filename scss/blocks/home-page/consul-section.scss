@@ -1,0 +1,203 @@
+.consul-section {
+  background-image: url("./../img/bg-consul.jpg");
+  background-image: image-set(
+    url("./../img/bg-consul.webp") type("image/webp"),
+    url("./../img/bg-consul.jpg") type("image/png")
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  color: $colorWhite;
+  overflow: hidden;
+  border-radius: 60px;
+  min-height: 954px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  @include responsive1549 {
+    min-height: 600px;
+  }
+
+  @include responsive767 {
+    min-height: 616px;
+    border-radius: 30px;
+  }
+
+  .container {
+  }
+
+  .consul-section__form {
+    background: $colorBlack-a3;
+    backdrop-filter: blur(13px);
+    border: solid 1px $colorWhite;
+    border-radius: 65px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 520px 1fr;
+    padding: 75px 30px;
+    gap: 50px;
+
+    @include responsive1549 {
+      padding: 40px 20px;
+      gap: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include responsive1199 {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 28px 30px;
+    }
+
+    @include responsive767 {
+      padding: 16px;
+      gap: 16px;
+      border-radius: 30px;
+    }
+  }
+
+  .consul-section__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 213px;
+    flex-wrap: wrap;
+    gap: 30px 16px;
+
+    @include responsive1549 {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  .consul-section__title {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+
+    @include responsive1549 {
+      gap: 10px;
+      width: 50%;
+    }
+
+    @include responsive767 {
+      width: 100%;
+    }
+  }
+
+  .caption {
+    @include responsive389 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .input-item {
+    input {
+      height: 76px;
+      color: $colorWhite;
+      border: solid 1px $colorWhite;
+      padding: 0 40px;
+      border-radius: 60px;
+      font-size: 20px;
+      padding-bottom: 7px;
+
+      @include responsive1549 {
+        height: 56px;
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      &::placeholder {
+        text-transform: none;
+        color: $colorWhite;
+        opacity: 1;
+      }
+    }
+  }
+
+  .btn {
+    height: 76px;
+    font-size: 20px;
+    padding-bottom: 7px;
+    width: 100%;
+    max-width: 100%;
+
+    @include responsive1549 {
+      height: 56px;
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive1199 {
+      order: 3;
+    }
+  }
+
+  .consul-section__check {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+    grid-column: 1 / 4;
+
+    @include responsive1549 {
+      width: 100%;
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+      padding-left: 50px;
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+      padding-bottom: 5px;
+
+      @include responsive1549 {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      @include before {
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: solid 1px $colorWhite;
+      }
+
+      @include after {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $colorYellow;
+        top: 10px;
+        left: 10px;
+        opacity: 0;
+      }
+
+      a {
+        color: $colorWhite;
+        display: inline-block;
+        text-decoration: underline;
+      }
+    }
+
+    input {
+      display: none;
+
+      &:checked {
+        & + label {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

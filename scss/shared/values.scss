@@ -32,6 +32,7 @@ $colorYellow: #f59e11;
 $responsive1799: "1799px";
 $responsive1699: "1699px";
 $responsive1549: "1549px";
+$responsive1439: "1439px";
 $responsive1199: "1199px";
 $responsive1023: "1023px";
 $responsive767: "767px";
@@ -89,6 +90,12 @@ $responsive389: "389px";
 
 @mixin responsive1549 {
   @media (max-width: $responsive1549) {
+    @content;
+  }
+}
+
+@mixin responsive1439 {
+  @media (max-width: $responsive1439) {
     @content;
   }
 }

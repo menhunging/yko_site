@@ -1,0 +1,191 @@
+.completed-villages {
+  overflow: hidden;
+
+  .completed-villages__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    @include responsive1023 {
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .caption {
+      @include responsive1023 {
+        width: 100%;
+      }
+    }
+
+    .swiper-controls {
+    }
+
+    p {
+      color: $colorGray;
+      max-width: 360px;
+
+      @include responsive1023 {
+        max-width: 230px;
+      }
+    }
+  }
+
+  .completed-villages__body {
+    margin-top: 55px;
+    position: relative;
+
+    @include responsive1023 {
+      margin-top: 20px;
+    }
+
+    .our-villages-slider-content__count {
+      order: initial;
+    }
+
+    .picture-block {
+      position: absolute;
+      top: 0;
+      left: -300px;
+      width: 991px;
+      height: 664px;
+      border-radius: 40px;
+      overflow: hidden;
+
+      @include responsive1549 {
+        left: -180px;
+        width: 620px;
+        height: 495px;
+      }
+
+      @include responsive1439 {
+        left: 0;
+        width: 520px;
+        height: 465px;
+      }
+
+      @include responsive1199 {
+        width: 430px;
+        height: 415px;
+      }
+
+      @include responsive1023 {
+        width: 370px;
+      }
+
+      @include responsive767 {
+        position: relative;
+        height: auto;
+        width: 100%;
+        padding-top: calc(250 / 365 * 100%);
+      }
+    }
+  }
+
+  .completed-villages__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    width: 515px;
+    margin-left: auto;
+    min-height: 664px;
+    transform: translateX(-221px);
+
+    @include responsive1549 {
+      width: 395px;
+      min-height: 500px;
+    }
+
+    @include responsive1439 {
+      gap: 15px;
+    }
+
+    @include responsive1199 {
+      width: 355px;
+      min-height: 420px;
+      transform: translateX(-171px);
+      font-size: 14px;
+    }
+
+    @include responsive1023 {
+      transform: translateX(0);
+    }
+
+    @include responsive767 {
+      width: 100%;
+      min-height: initial;
+      padding: 14px 0;
+    }
+
+    .our-villages-slider__info {
+      gap: 60px;
+      margin-top: 100px;
+
+      @include responsive1439 {
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      @include responsive1199 {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      @include responsive767 {
+        flex-direction: row;
+        margin-top: 0;
+      }
+
+      @include responsive389 {
+        flex-direction: column;
+        margin-top: 0;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.completed-villages__slider {
+  overflow: visible;
+  position: relative;
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='989' height='397' viewBox='0 0 989 397' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M739.611 75.0967L738.571 76.8398L615.551 3.4873L615.161 3.25488L614.774 3.49121L493.607 77.8076L368.966 3.4873L368.576 3.25488L368.19 3.49121L247.022 77.8076L122.382 3.4873L121.992 3.25488L121.605 3.49121L2.09082 76.7842L1.03223 75.0654L121.984 0.875977L246.626 75.1973L247.016 75.4297L247.402 75.1924L368.569 0.875977L493.211 75.1973L493.601 75.4297L493.987 75.1924L615.153 0.875977L739.611 75.0967Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M739.611 138.924L738.571 140.667L615.551 67.3145L615.161 67.082L614.774 67.3184L493.607 141.635L368.966 67.3145L368.576 67.082L368.19 67.3184L247.022 141.635L122.382 67.3145L121.992 67.082L121.605 67.3184L2.09082 140.611L1.03223 138.893L121.984 64.7031L246.626 139.024L247.016 139.257L247.402 139.02L368.569 64.7031L493.211 139.024L493.601 139.257L493.987 139.02L615.153 64.7031L739.611 138.924Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M987.971 266.577L986.931 268.32L863.91 194.968L863.521 194.735L863.134 194.972L741.967 269.288L617.325 194.968L616.936 194.735L616.549 194.972L494.513 269.82L368.967 194.968L368.577 194.735L368.19 194.972L248.676 268.265L247.617 266.546L368.569 192.356L494.099 267.21L494.488 267.442L494.875 267.205L616.928 192.356L741.57 266.678L741.96 266.91L742.347 266.673L863.513 192.356L987.971 266.577Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M739.611 202.75L738.571 204.493L615.551 131.141L615.161 130.908L614.775 131.145L493.607 205.461L368.967 131.141L368.577 130.908L368.19 131.145L248.676 204.438L247.617 202.719L368.569 128.529L493.211 202.851L493.601 203.083L493.987 202.846L615.154 128.529L739.611 202.75Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M987.969 330.404L986.929 332.147L863.909 258.795L863.519 258.562L863.134 258.799L741.966 333.115L617.325 258.795L616.935 258.562L616.549 258.799L497.034 332.092L495.975 330.373L616.927 256.184L741.569 330.505L741.959 330.737L742.345 330.5L863.512 256.184L987.969 330.404Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M987.97 394.23L986.93 395.975L863.91 322.621L863.52 322.389L863.134 322.625L743.619 395.918L742.56 394.199L863.512 320.01L987.97 394.23Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 989px;
+    height: 397px;
+    left: calc(50% - 380px);
+    bottom: -310px;
+
+    @include responsive1549 {
+      width: 740px;
+      height: 267px;
+      left: calc(50% - 460px);
+      bottom: -230px;
+      background-size: contain;
+    }
+  }
+
+  .swiper-slide {
+    position: relative;
+  }
+
+  .swiper-slide-next {
+    .picture-block {
+      transform: translateX(125px);
+
+      @include responsive1439 {
+        transform: translateX(-155px);
+      }
+
+      @include responsive1023 {
+        transform: translateX(0);
+      }
+    }
+  }
+}

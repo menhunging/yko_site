@@ -104,6 +104,130 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".sliderHouses").length > 0) {
+    const swiper = new Swiper(".sliderHouses", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      navigation: {
+        prevEl: ".primer-houses .swiperBtnPrev",
+        nextEl: ".primer-houses .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.15,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 12,
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+  if ($(".completed-villages__slider").length > 0) {
+    const swiper = new Swiper(".completed-villages__slider", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        prevEl: ".primer-houses__head .swiperBtnPrev",
+        nextEl: ".primer-houses__head .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+  if ($("[data-btn-disabled]").length > 0) {
+    $("[data-btn-disabled]").on("click", function () {
+      const formBlock = $(this).parents("form");
+      const btn = formBlock.find("[data-for-disabled]");
+      const isDisabled = btn.prop("disabled");
+
+      btn.prop("disabled", !isDisabled);
+    });
+  }
+
+  if ($(".technologies__circle").length > 0) {
+    $(".technologies__circle").on("click", function () {
+      $(".technologies__info").removeClass("opened");
+      $(this).next(".technologies__info").addClass("opened");
+    });
+
+    $(document).mouseup(function (e) {
+      if (
+        !$(".technologies__item").is(e.target) &&
+        $(".technologies__item").has(e.target).length === 0
+      ) {
+        $(".technologies__info").removeClass("opened");
+      }
+    });
+  }
+
+  if ($(".technologies__slider").length > 0) {
+    const swiper = new Swiper(".technologies__slider", {
+      slidesPerView: 2,
+      spaceBetween: 19,
+      navigation: {
+        prevEl: ".technologies__slider .swiperBtnPrev",
+        nextEl: ".technologies__slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+
+        640: {
+          slidesPerView: 1.5,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 1.65,
+          spaceBetween: 19,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 19,
+        },
+      },
+    });
+  }
+
+  if ($(".reviews-slider").length > 0) {
+    const swiper = new Swiper(".reviews-slider", {
+      slidesPerView: 1,
+      spaceBetween: 19,
+      navigation: {
+        prevEl: ".reviews-slider .swiperBtnPrev",
+        nextEl: ".reviews-slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 19,
+        },
+      },
+    });
+
+    $(".reviews-slider .swiper-slide").on("click", function () {
+      const index = $(this).index();
+      swiper.slideTo(index);
+    });
+  }
+
   // base
 
   if ($(".faq-list").length > 0) {
