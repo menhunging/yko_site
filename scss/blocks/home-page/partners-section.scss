@@ -1,0 +1,42 @@
+.partners-section {
+  overflow: hidden;
+}
+
+.partners-slider {
+  margin-top: 104px;
+  overflow: visible;
+
+  @include responsive1549 {
+    margin-top: 60px;
+  }
+
+  @include responsive1199{
+    margin-top: 30px;
+  }
+
+  @include responsive767{
+    margin-top: 20px;
+  }
+
+  .swiper-slide {
+    position: relative;
+    height: 183px;
+    filter: grayscale(1);
+
+    @include responsive1549{
+      height: 140px;
+    }
+  }
+
+  .picture-block {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

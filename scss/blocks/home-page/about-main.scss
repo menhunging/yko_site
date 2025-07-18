@@ -1,0 +1,267 @@
+.about-main {
+  position: relative;
+  z-index: 3;
+  border-radius: 60px;
+  overflow: hidden;
+
+  @include responsive767 {
+    border-radius: 30px;
+  }
+
+  .about-main__numbers {
+    border-top: solid 1px $colorWhite;
+    border-radius: 40px;
+    backdrop-filter: blur(13px);
+    background-color: $colorBlack-a5;
+    color: $colorWhite;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    text-transform: uppercase;
+    padding: 60px;
+    margin-bottom: 111px;
+
+    @include responsive1549 {
+      font-size: 20px;
+      line-height: 30px;
+      padding: 40px;
+      margin-bottom: 60px;
+    }
+
+    @include responsive1023 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    @include responsive389 {
+      font-size: 12px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      @include responsive1199 {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+
+    li {
+      max-width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+
+      @include responsive1199 {
+        gap: 12px;
+        width: calc(50% - 24px);
+        max-width: initial;
+      }
+
+      @include responsive1023 {
+      }
+
+      &:last-child {
+        max-width: initial;
+      }
+    }
+
+    .num {
+      font-weight: 400;
+      font-size: 120px;
+      line-height: 120px;
+      text-transform: uppercase;
+
+      @include responsive1549 {
+        font-size: 80px;
+        line-height: 90px;
+      }
+
+      @include responsive1023 {
+        font-size: 60px;
+        line-height: 70px;
+      }
+
+      @include responsive767 {
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      @include responsive389 {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+
+    p {
+      max-width: 200px;
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  @include before {
+    top: 0;
+    left: 0;
+    background: linear-gradient(0.5deg, #000000 0.41%, rgba(0, 0, 0, 0) 91.4%);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about-main__info {
+  color: $colorWhite;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+
+  .caption {
+  }
+
+  ul {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include responsive1549 {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    @include responsive1023 {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @include responsive767 {
+      margin: 15px 0;
+    }
+
+    li {
+      width: 100%;
+      max-width: 682px;
+      border-top: solid 1px $colorWhite;
+      border-radius: 40px;
+      backdrop-filter: blur(13px);
+      background-color: $colorBlack-a5;
+      color: $colorWhite;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+      padding: 60px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+
+      @include responsive1549 {
+        max-width: 565px;
+        padding: 35px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      @include responsive1199 {
+        max-width: 485px;
+        padding: 25px;
+      }
+
+      @include responsive1023 {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .name {
+        font-size: 25px;
+        line-height: 35px;
+        max-width: 360px;
+
+        @include responsive1549 {
+          font-size: 20px;
+          line-height: 30px;
+        }
+
+        @include responsive1439 {
+          max-width: 320px;
+        }
+
+        @include responsive1023 {
+          max-width: 70%;
+        }
+
+        @include responsive767 {
+          font-size: 15px;
+          line-height: 18px;
+        }
+      }
+
+      p {
+        max-width: 408px;
+
+        @include responsive1549 {
+          max-width: 270px;
+        }
+
+        @include responsive1023 {
+          max-width: 70%;
+        }
+
+        @include responsive767 {
+          font-size: 12px;
+          line-height: 16px;
+          max-width: 50%;
+        }
+      }
+    }
+  }
+
+  .picture-block {
+    width: 260px;
+    height: 125px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: auto;
+
+    @include responsive1549 {
+      width: 180px;
+      height: 100px;
+    }
+
+    @include responsive1199 {
+      width: 110px;
+      height: 90px;
+    }
+
+    @include responsive767 {
+      width: 80px;
+      height: 90px;
+      right: 20px;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

@@ -888,3 +888,11 @@ section {
     opacity: 0.9;
   }
 }
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}

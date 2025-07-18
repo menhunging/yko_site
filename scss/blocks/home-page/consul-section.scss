@@ -25,68 +25,110 @@
     min-height: 616px;
     border-radius: 30px;
   }
+}
 
-  .container {
+.consul-section__check {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  width: 100%;
+  grid-column: 1 / 4;
+
+  @include responsive1549 {
+    width: 100%;
   }
 
-  .consul-section__form {
-    background: $colorBlack-a3;
-    backdrop-filter: blur(13px);
-    border: solid 1px $colorWhite;
-    border-radius: 65px;
-    display: grid;
+  label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 50px;
+    min-height: 30px;
+    display: flex;
     align-items: center;
-    grid-template-columns: 520px 1fr;
-    padding: 75px 30px;
-    gap: 50px;
+    padding-bottom: 5px;
 
     @include responsive1549 {
-      padding: 40px 20px;
-      gap: 30px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    @include responsive1199 {
       flex-direction: column;
       align-items: flex-start;
-      padding: 28px 30px;
     }
 
-    @include responsive767 {
-      padding: 16px;
-      gap: 16px;
-      border-radius: 30px;
+    @include before {
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: solid 1px $colorWhite;
+    }
+
+    @include after {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $colorYellow;
+      top: 10px;
+      left: 10px;
+      opacity: 0;
+    }
+
+    a {
+      color: $colorWhite;
+      display: inline-block;
+      text-decoration: underline;
     }
   }
 
-  .consul-section__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 213px;
-    flex-wrap: wrap;
-    gap: 30px 16px;
+  input {
+    display: none;
 
-    @include responsive1549 {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    &:checked {
+      & + label {
+        &::after {
+          opacity: 1;
+        }
+      }
     }
   }
+}
 
-  .consul-section__title {
+.consul-section__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 213px;
+  flex-wrap: wrap;
+  gap: 30px 16px;
+
+  @include responsive1549 {
     display: flex;
     flex-direction: column;
-    gap: 21px;
-
-    @include responsive1549 {
-      gap: 10px;
-      width: 50%;
-    }
-
-    @include responsive767 {
-      width: 100%;
-    }
+    gap: 16px;
   }
+}
+
+.consul-section__title {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+
+  @include responsive1549 {
+    gap: 10px;
+    width: 50%;
+  }
+
+  @include responsive767 {
+    width: 100%;
+  }
+}
+
+.consul-section__form {
+  background: $colorBlack-a3;
+  backdrop-filter: blur(13px);
+  border: solid 1px $colorWhite;
+  border-radius: 65px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 520px 1fr;
+  padding: 75px 30px;
+  gap: 50px;
 
   .caption {
     @include responsive389 {
@@ -109,6 +151,10 @@
         height: 56px;
         font-size: 18px;
         line-height: 20px;
+      }
+
+      @include responsive767 {
+        padding: 0 30px 6px;
       }
 
       &::placeholder {
@@ -137,67 +183,136 @@
     }
   }
 
-  .consul-section__check {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
+  @include responsive1549 {
+    padding: 40px 20px;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include responsive1199 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 30px;
+  }
+
+  @include responsive767 {
+    padding: 16px;
+    gap: 16px;
+    border-radius: 30px;
+  }
+}
+
+.call-form {
+  width: 100%;
+  margin-top: -140px;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+
+  @include responsive767{
+    margin-bottom: 0;
+  }
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1154' height='463' viewBox='0 0 1154 463' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M862.734 87.5371L861.393 89.7842L717.814 4.17383L717.425 3.94141L717.038 4.17871L575.664 90.8877L430.238 4.17383L429.849 3.94141L429.462 4.17871L288.088 90.8877L142.662 4.17383L142.272 3.94141L141.886 4.17871L2.39746 89.7207L1.03223 87.5029L142.262 0.875977L287.688 87.5908L288.078 87.8232L288.465 87.5859L429.838 0.875977L575.265 87.5908L575.654 87.8232L576.041 87.5859L717.414 0.875977L862.734 87.5371Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M862.734 161.976L861.393 164.223L717.814 78.6123L717.425 78.3799L717.038 78.6172L575.664 165.326L430.238 78.6123L429.849 78.3799L429.462 78.6172L288.088 165.326L142.662 78.6123L142.272 78.3799L141.886 78.6172L2.39746 164.159L1.03223 161.941L142.262 75.3145L287.688 162.029L288.078 162.262L288.465 162.024L429.838 75.3145L575.265 162.029L575.654 162.262L576.041 162.024L717.414 75.3145L862.734 161.976Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M1152.38 310.85L1151.04 313.097L1007.46 227.486L1007.07 227.254L1006.68 227.491L865.31 314.2L719.884 227.486L719.495 227.254L719.108 227.491L576.72 314.82L430.239 227.486L429.849 227.254L429.462 227.491L289.974 313.033L288.609 310.815L429.838 224.188L576.3 311.523L576.69 311.756L577.076 311.519L719.484 224.188L864.911 310.903L865.3 311.136L865.687 310.898L1007.06 224.188L1152.38 310.85Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M862.735 236.411L861.393 238.658L717.815 153.048L717.425 152.815L717.039 153.053L575.665 239.762L430.239 153.048L429.849 152.815L429.462 153.053L289.974 238.595L288.609 236.377L429.838 149.75L575.265 236.465L575.655 236.697L576.042 236.46L717.415 149.75L862.735 236.411Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M1152.38 385.286L1151.04 387.533L1007.46 301.923L1007.07 301.69L1006.68 301.928L865.309 388.637L719.884 301.923L719.494 301.69L719.107 301.928L579.619 387.47L578.254 385.252L719.483 298.625L864.91 385.34L865.3 385.572L865.686 385.335L1007.06 298.625L1152.38 385.286Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M1152.38 459.725L1151.04 461.972L1007.46 376.361L1007.07 376.129L1006.68 376.366L867.196 461.908L865.831 459.69L1007.06 373.063L1152.38 459.725Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1153px;
+    height: 463px;
+    top: -25px;
+    right: 70px;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .consul-section__title {
     width: 100%;
-    grid-column: 1 / 4;
+  }
+
+  .call-form__inner {
+    backdrop-filter: blur(3px);
+    border: solid 1px $colorBlack;
+    border-radius: 50px;
+    background-color: $colorWhite-a5;
+    position: relative;
+  }
+
+  .consul-section__form {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    align-items: flex-start;
+    max-width: 939px;
+    width: 100%;
+    padding: 62px 50px;
+    border-radius: 0;
+    backdrop-filter: blur(0);
+    border: 0;
 
     @include responsive1549 {
-      width: 100%;
+      max-width: 589px;
     }
 
-    label {
-      position: relative;
-      cursor: pointer;
-      padding-left: 50px;
-      min-height: 30px;
-      display: flex;
-      align-items: center;
-      padding-bottom: 5px;
-
-      @include responsive1549 {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      @include before {
-        top: 0;
-        left: 0;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        border: solid 1px $colorWhite;
-      }
-
-      @include after {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: $colorYellow;
-        top: 10px;
-        left: 10px;
-        opacity: 0;
-      }
-
-      a {
-        color: $colorWhite;
-        display: inline-block;
-        text-decoration: underline;
-      }
+    @include responsive1023 {
+      max-width: 449px;
+      padding: 20px;
     }
 
-    input {
-      display: none;
+    .input-item {
+      input {
+        border: solid 1px $colorBlack;
+        color: $colorBlack;
 
-      &:checked {
-        & + label {
-          &::after {
-            opacity: 1;
-          }
+        &::placeholder {
+          color: $colorBlack;
         }
       }
     }
+  }
+
+  .caption {
+    max-width: 345px;
+  }
+
+  .consul-section__list {
+    width: 100%;
+  }
+
+  .consul-section__check {
+    label {
+      &::after,
+      &::before {
+        border-color: $colorBlack;
+      }
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    width: 493px;
+    height: 561px;
+    right: 50px;
+    bottom: 0;
+    background-size: contain;
+
+    @include responsive1199 {
+      right: 0px;
+    }
+
+    @include responsive1023 {
+      width: 363px;
+      height: 451px;
+      right: -20px;
+    }
+
+    @include responsive767 {
+      display: none;
+    }
+  }
+
+  .consul-section__check label a {
+    color: $colorBlack;
   }
 }
