@@ -41,6 +41,9 @@
     color: $colorWhite;
 
     @include hover {
+      background-color: $colorBlack;
+      border: solid 1px $colorBlack;
+      color: $colorWhite;
     }
   }
 

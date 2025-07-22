@@ -6,15 +6,20 @@
   z-index: 2;
 
   @include before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='338' height='413' viewBox='0 0 338 413' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.43'%3e%3cpath d='M-48 112.14L144.5 1L337 112.14' stroke='%238B8B8B'/%3e%3cpath d='M-48 185.613L144.5 74.4733L337 185.613' stroke='%238B8B8B'/%3e%3cpath d='M-48 262.025L144.5 150.885L337 262.025' stroke='%238B8B8B'/%3e%3cpath d='M-48 335.499L144.5 224.359L337 335.499' stroke='%238B8B8B'/%3e%3cpath d='M-48 411.911L144.5 300.771L337 411.911' stroke='%238B8B8B'/%3e%3c/g%3e%3c/svg%3e ");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='926' height='463' viewBox='0 0 926 463' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M634.734 87.5371L633.393 89.7842L489.814 4.17383L489.425 3.94141L489.038 4.17871L347.664 90.8877L202.238 4.17383L201.849 3.94141L201.462 4.17871L60.0879 90.8877L-85.3379 4.17383L-85.7275 3.94141L-86.1143 4.17871L-225.603 89.7207L-226.968 87.5029L-85.7383 0.875977L59.6885 87.5908L60.0781 87.8232L60.4648 87.5859L201.838 0.875977L347.265 87.5908L347.654 87.8232L348.041 87.5859L489.414 0.875977L634.734 87.5371Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M634.734 161.976L633.393 164.223L489.814 78.6123L489.425 78.3799L489.038 78.6172L347.664 165.326L202.238 78.6123L201.849 78.3799L201.462 78.6172L60.0879 165.326L-85.3379 78.6123L-85.7275 78.3799L-86.1143 78.6172L-225.603 164.159L-226.968 161.941L-85.7383 75.3145L59.6885 162.029L60.0781 162.262L60.4648 162.024L201.838 75.3145L347.265 162.029L347.654 162.262L348.041 162.024L489.414 75.3145L634.734 161.976Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M924.38 310.85L923.039 313.097L779.461 227.486L779.071 227.254L778.684 227.491L637.31 314.2L491.884 227.486L491.495 227.254L491.108 227.491L348.72 314.82L202.239 227.486L201.849 227.254L201.463 227.491L61.9742 313.033L60.609 310.815L201.839 224.188L348.3 311.523L348.69 311.756L349.076 311.519L491.484 224.188L636.911 310.903L637.3 311.136L637.687 310.898L779.06 224.188L924.38 310.85Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M634.735 236.411L633.393 238.658L489.815 153.048L489.425 152.815L489.039 153.053L347.665 239.762L202.239 153.048L201.849 152.815L201.463 153.053L61.9742 238.595L60.609 236.377L201.839 149.75L347.265 236.465L347.655 236.697L348.042 236.46L489.415 149.75L634.735 236.411Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M924.38 385.286L923.038 387.533L779.46 301.923L779.07 301.69L778.683 301.928L637.309 388.637L491.884 301.923L491.494 301.69L491.107 301.928L351.619 387.47L350.254 385.252L491.483 298.625L636.91 385.34L637.3 385.572L637.686 385.335L779.059 298.625L924.38 385.286Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M924.38 459.725L923.039 461.972L779.46 376.361L779.071 376.129L778.684 376.366L639.196 461.908L637.831 459.69L779.06 373.063L924.38 459.725Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3c/svg%3e ");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 385px;
-    height: 410px;
-    top: 200px;
+    width: 1153px;
+    height: 463px;
+    bottom: -50px;
     left: -120px;
     z-index: -1;
+    opacity: 0.8;
+
+    @include responsive1199 {
+      display: none;
+    }
   }
 
   @include after {
@@ -27,16 +32,84 @@
     right: -50px;
     bottom: -10px;
     z-index: -1;
+
+    @include responsive1199 {
+      right: -100px;
+      bottom: -30px;
+    }
   }
 
   .container {
     position: relative;
   }
 
+  .linksSoc {
+    margin-right: 190px;
+
+    @include responsive1549 {
+      margin-right: 170px;
+    }
+  }
+
   .section-title {
+    @include responsive1199 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   .caption {
+  }
+
+  .swiper-controls {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    gap: 10px;
+
+    @include responsive1549 {
+      top: 20px;
+      right: 20px;
+    }
+
+    @include responsive1199 {
+      top: 10px;
+      right: 20px;
+    }
+
+    @include responsive767 {
+      top: -2px;
+    }
+
+    .swiperBtnPrev {
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+
+      @include responsive767 {
+        width: 49px;
+        height: 49px;
+        min-width: 49px;
+      }
+    }
+
+    .swiperBtnNext {
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+
+      @include responsive767 {
+        width: 49px;
+        height: 49px;
+        min-width: 49px;
+      }
+    }
   }
 
   .reviews-slider {
@@ -147,32 +220,147 @@
         }
       }
     }
+  }
 
-    .swiper-controls {
-      position: absolute;
-      top: 11px;
-      right: 0;
+  .reviews-slider-text {
+    margin-top: 50px;
+    overflow: visible;
+    position: static;
 
-      @include responsive1549 {
-        top: 20px;
-        right: 20px;
-      }
-
-      @include responsive1199 {
-        top: 10px;
-        right: 20px;
-      }
-
-      @include responsive389 {
-        top: -5px;
-      }
-
-      .swiperBtnPrev {
-        background-color: $colorBlack;
-      }
-      .swiperBtnNext {
-        background-color: $colorBlack;
-      }
+    @include responsive767 {
+      margin-top: 30px;
     }
+
+    @include responsive389 {
+    }
+  }
+}
+
+.reviews-text {
+  background-color: $colorWhite;
+  padding: 66px 55px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8e8e8e;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 40px;
+
+  @include responsive1199 {
+    padding: 30px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .reviews-text__link {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: $colorBlack;
+    text-decoration: underline;
+    transition: text-decoration 0.3s;
+    text-decoration-color: transparent;
+    min-height: 84px;
+
+    @include responsive1199 {
+      font-size: 30px;
+      line-height: 35px;
+      min-height: 78px;
+    }
+
+    @include responsive767 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @include hover {
+      text-decoration-color: $colorBlack;
+    }
+  }
+
+  .reviews-text__controls {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+
+    .star {
+      width: 46px;
+      height: 46px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.67577 19.5243C3.71218 19.0326 3.83661 18.4742 3.92766 17.9158C4.11278 16.7716 4.30398 15.6305 4.50125 14.4864C4.52552 14.3407 4.44662 14.2831 4.37075 14.2102C3.24785 13.1268 2.13103 12.0403 1.00509 10.9599C-0.199741 9.80363 0.225138 7.86739 1.79112 7.40306C2.16744 7.29077 2.56197 7.26649 2.9474 7.20579C4.25239 7.00549 5.56041 6.81126 6.86843 6.6231C7.00803 6.60186 7.04749 6.51385 7.09604 6.4137C7.79102 4.98732 8.47994 3.5579 9.18402 2.13759C9.56338 1.36674 10.2068 0.957031 11.0626 0.957031C11.9306 0.957031 12.5618 1.38495 12.9503 2.16187C13.6179 3.49417 14.2947 4.82343 14.9381 6.16787C15.0898 6.48653 15.2841 6.58972 15.6149 6.63221C17.1384 6.83251 18.6588 7.04191 20.1732 7.2847C20.9866 7.4152 21.5298 7.92202 21.7726 8.70804C22.0154 9.49407 21.8363 10.2103 21.2567 10.79C20.1307 11.922 18.9866 13.0357 17.8455 14.1526C17.7423 14.2527 17.6998 14.3377 17.7271 14.4955C18.0094 16.0494 18.2825 17.6032 18.5496 19.1601C18.6952 20.0068 18.4373 20.72 17.7453 21.2298C17.0534 21.7427 16.2977 21.7913 15.5329 21.3998C14.1278 20.6805 12.7287 19.9491 11.3297 19.2117C11.181 19.1328 11.0717 19.1328 10.923 19.2117C9.57855 19.937 8.22197 20.638 6.88057 21.3755C5.85782 21.937 4.89274 21.682 4.30094 21.1085C3.88517 20.6957 3.67273 20.1919 3.67577 19.5243Z' fill='black'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      border: solid 1px $colorBlack;
+      border-radius: 50%;
+    }
+  }
+
+  .reviews-text__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8e8e8e;
+  }
+
+  .reviews-text__date {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 32px;
+    color: $colorBlack;
+
+    @include responsive1199 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}
+
+.tabsSlider {
+  transition: all 1s 0.3s;
+  display: none;
+  opacity: 0;
+
+  &.opened {
+    opacity: 1;
+    display: block;
+  }
+}
+
+#reviewText2 {
+  .reviews-text__controls {
+    order: -1;
+    margin: 0;
+    margin-bottom: 50px;
+
+    @include responsive767 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .reviews-text {
+    padding: 35px 50px;
+
+    @include responsive767 {
+      padding: 20px;
+      gap: 20px;
+    }
+  }
+
+  .reviews-text__link {
+    min-height: initial;
   }
 }

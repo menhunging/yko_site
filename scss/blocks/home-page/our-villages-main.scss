@@ -268,10 +268,12 @@
 .our-villages-slider-content__data {
   font-weight: 400;
   font-size: 33px;
-  line-height: 33px;
+  line-height: 30px;
   min-height: 30px;
   display: flex;
   align-items: center;
+  position: relative;
+  top: -2px;
 
   @include responsive1549 {
     position: relative;

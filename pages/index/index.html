@@ -794,8 +794,8 @@
                     <div class="technologies__content">
                         <div class="picture-block">
                             <picture>
-                                <source type="image/webp" srcset="./../../img/bg-consul.webp" />
-                                <img src="./../../img/bg-consul.jpg" alt="">
+                                <source type="image/webp" srcset="./../../img/bg-about.webp" />
+                                <img src="./../../img/bg-about.jpg" alt="">
                             </picture>
                         </div>
 
@@ -852,7 +852,7 @@
 
                             <div class="technologies__item">
                                 <div class="technologies__circle"></div>
-                                <div class="technologies__info">
+                                <div class="technologies__info opened">
                                     <span class="technologies__title">Тёплая вентилируемая кровля</span>
                                     <p>
                                         4 слоя минерального утеплителя, 200мм. Мягкая кровля ТЕХНОНИКОЛЬ SHINGLAS.
@@ -1161,102 +1161,27 @@
 
                 <div class="picture-block">
                     <picture>
-                        <source type="image/webp" srcset="./../../img/pic-grettings.webp" />
-                        <img src="./../../img/pic-grettings.jpg" alt="">
+                        <source type="image/webp" srcset="./../../img/bgabout2.webp" />
+                        <img src="./../../img/bgabout2.jpg" alt="">
                     </picture>
                 </div>
 
             </section>
 
-            <section class="reviews">
-                <div class="container">
-                    <div class="section-title">
-                        <h2 class="caption caption--h2">
-                            отзывы
-                        </h2>
-
-                        <div class="swiper-controls">
-                            <span class="swiperBtn swiperBtnPrev swiperBtnPrev--dark"></span>
-                            <span class="swiperBtn swiperBtnNext swiperBtnNext--dark"></span>
-                        </div>
-                    </div>
-
-                    <div class="reviews-slider swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
-                                <div class="picture-block">
-                                    <picture>
-                                        <source type="image/webp" srcset="./../../img/pic-reviews.webp" ƒ />
-                                        <img src="./../../img/pic-reviews.png" alt="">
-                                    </picture>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
-                                <div class="picture-block">
-                                    <picture>
-                                        <source type="image/webp" srcset="./../../img/pic-reviews.webp" ƒ />
-                                        <img src="./../../img/pic-reviews.png" alt="">
-                                    </picture>
-
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
-                                <div class="picture-block">
-                                    <picture>
-                                        <source type="image/webp" srcset="./../../img/pic-reviews.webp" ƒ />
-                                        <img src="./../../img/pic-reviews.png" alt="">
-                                    </picture>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
-                                <div class="picture-block">
-                                    <picture>
-                                        <source type="image/webp" srcset="./../../img/pic-reviews.webp" />
-                                        <img src="./../../img/pic-reviews.png" alt="">
-                                    </picture>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
-                                <div class="picture-block">
-                                    <picture>
-                                        <source type="image/webp" srcset="./../../img/pic-reviews.webp" />
-                                        <img src="./../../img/pic-reviews.png" alt="">
-                                    </picture>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="swiper-controls">
-                            <span class="swiperBtnPrev swiperBtnPrev--black"></span>
-                            <span class="swiperBtnNext swiperBtnNext--black"></span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="reviews">
+            <section class="reviews tabsSection">
                 <div class="container">
                     <div class="section-title">
                         <h2 class="caption caption--h2">
                             НОВОСТИ
                         </h2>
 
-                        <div class="swiper-controls">
-                            <span class="swiperBtn swiperBtnPrev swiperBtnPrev--dark"></span>
-                            <span class="swiperBtn swiperBtnNext swiperBtnNext--dark"></span>
+                        <div class="tabs-linkLink">
+                            <li><a href="#video-new" class="active">Видео-новости</a></li>
+                            <li><a href="#text-new">Новости</a></li>
                         </div>
                     </div>
 
-                    <div class="reviews-slider swiper">
+                    <div class="reviews-slider swiper tabsSlider opened" id="video-new">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
@@ -1311,8 +1236,257 @@
 
                         </div>
                         <div class="swiper-controls">
-                            <span class="swiperBtnPrev swiperBtnPrev--black"></span>
-                            <span class="swiperBtnNext swiperBtnNext--black"></span>
+                            <span class="swiperBtnPrev swiperBtnPrev--dark"></span>
+                            <span class="swiperBtnNext swiperBtnNext--dark"></span>
+                        </div>
+                    </div>
+
+                    <div class="reviews-slider-text swiper tabsSlider" id="text-new">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews-text">
+                                    <a href="#" class="reviews-text__link">очень длинная новость</a>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged.
+                                    </p>
+
+                                    <div class="reviews-text__controls">
+                                        <span class="reviews-text__title">дата публикации</span>
+                                        <span class="reviews-text__date">01.05.2022</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="reviews-text">
+                                    <a href="#" class="reviews-text__link">очень длинная новость</a>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged.
+                                    </p>
+
+                                    <div class="reviews-text__controls">
+                                        <span class="reviews-text__title">дата публикации</span>
+                                        <span class="reviews-text__date">01.05.2022</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="reviews-text">
+                                    <a href="#" class="reviews-text__link">очень длинная новость</a>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged.
+                                    </p>
+
+                                    <div class="reviews-text__controls">
+                                        <span class="reviews-text__title">дата публикации</span>
+                                        <span class="reviews-text__date">01.05.2022</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="reviews-text">
+                                    <a href="#" class="reviews-text__link">очень длинная новость</a>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged.
+                                    </p>
+
+                                    <div class="reviews-text__controls">
+                                        <span class="reviews-text__title">дата публикации</span>
+                                        <span class="reviews-text__date">01.05.2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controls">
+                            <span class="swiperBtnPrev swiperBtnPrev--dark"></span>
+                            <span class="swiperBtnNext swiperBtnNext--dark"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reviews tabsSection">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 class="caption caption--h2">
+                            отзывы
+                        </h2>
+
+                        <div class="tabs-linkLink">
+                            <li><a href="#reviewVideo2" class="active">Видео-отзывы</a></li>
+                            <li><a href="#reviewText2">Отзывы</a></li>
+                        </div>
+
+                        <div class="linksSoc">
+                            <a href="#" class="linksSoc__link linksSoc__ot">отзовик</a>
+                            <a href="#" class="linksSoc__link linksSoc__google">google</a>
+                            <a href="#" class="linksSoc__link linksSoc__yandex">яндекс</a>
+                        </div>
+                    </div>
+
+                    <div class="reviews-slider swiper tabsSlider opened" id="reviewVideo2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-reviews.webp" ƒ />
+                                        <img src="./../../img/pic-reviews.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-reviews.webp" ƒ />
+                                        <img src="./../../img/pic-reviews.png" alt="">
+                                    </picture>
+
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-reviews.webp" ƒ />
+                                        <img src="./../../img/pic-reviews.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-reviews.webp" />
+                                        <img src="./../../img/pic-reviews.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="./../../img/video/video.webm" class="play" data-fancybox="video"></a>
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-reviews.webp" />
+                                        <img src="./../../img/pic-reviews.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-controls">
+                            <span class="swiperBtnPrev swiperBtnPrev--dark"></span>
+                            <span class="swiperBtnNext swiperBtnNext--dark"></span>
+                        </div>
+                    </div>
+
+                    <div class="reviews-slider-text swiper tabsSlider" id="reviewText2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews-text">
+                                    <a href="#" class="reviews-text__link">Иванов иван</a>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged.
+                                    </p>
+
+                                    <div class="reviews-text__controls">
+                                        <span class="reviews-text__title">дата публикации</span>
+                                        <span class="reviews-text__date">01.05.2022</span>
+
+                                        <span class="star"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="reviews-text">
+                                    <a href="#" class="reviews-text__link">Иванов иван</a>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged.
+                                    </p>
+
+                                    <div class="reviews-text__controls">
+                                        <span class="reviews-text__title">дата публикации</span>
+                                        <span class="reviews-text__date">01.05.2022</span>
+
+                                        <span class="star"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="reviews-text">
+                                    <a href="#" class="reviews-text__link">Иванов иван</a>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged.
+                                    </p>
+
+                                    <div class="reviews-text__controls">
+                                        <span class="reviews-text__title">дата публикации</span>
+                                        <span class="reviews-text__date">01.05.2022</span>
+
+                                        <span class="star"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="reviews-text">
+                                    <a href="#" class="reviews-text__link">Иванов иван</a>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged.
+                                    </p>
+
+                                    <div class="reviews-text__controls">
+                                        <span class="reviews-text__title">дата публикации</span>
+                                        <span class="reviews-text__date">01.05.2022</span>
+
+                                        <span class="star"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controls">
+                            <span class="swiperBtnPrev swiperBtnPrev--dark"></span>
+                            <span class="swiperBtnNext swiperBtnNext--dark"></span>
                         </div>
                     </div>
                 </div>

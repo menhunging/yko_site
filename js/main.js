@@ -134,8 +134,8 @@ $(document).ready(function () {
       slidesPerView: 1,
       spaceBetween: 20,
       navigation: {
-        prevEl: ".primer-houses__head .swiperBtnPrev",
-        nextEl: ".primer-houses__head .swiperBtnNext",
+        prevEl: ".completed-villages__head .swiperBtnPrev",
+        nextEl: ".completed-villages__head .swiperBtnNext",
       },
       breakpoints: {
         0: {
@@ -161,7 +161,7 @@ $(document).ready(function () {
   }
 
   if ($(".technologies__circle").length > 0) {
-    $(".technologies__circle").on("click", function () {
+    $(".technologies__circle").on("mouseover", function () {
       $(".technologies__info").removeClass("opened");
       $(this).next(".technologies__info").addClass("opened");
     });
@@ -241,8 +241,8 @@ $(document).ready(function () {
         let navPrev = undefined;
 
         if (!slider.swiper) {
-          navNext = $(slider).parents(".reviews").find(".swiperBtnNext")[0];
-          navPrev = $(slider).parents(".reviews").find(".swiperBtnPrev")[0];
+          navNext = $(slider).find(".swiperBtnNext")[0];
+          navPrev = $(slider).find(".swiperBtnPrev")[0];
 
           mySwipers[index] = new Swiper(slider, {
             slidesPerView: 1,
@@ -251,6 +251,54 @@ $(document).ready(function () {
               0: {
                 slidesPerView: 1,
                 spaceBetween: 19,
+              },
+            },
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".reviews-slider-text").length > 0) {
+    const sliders = document.querySelectorAll(".reviews-slider-text");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).find(".swiperBtnNext")[0];
+          navPrev = $(slider).find(".swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 24,
+            breakpoints: {
+              0: {
+                slidesPerView: 1.15,
+                spaceBetween: 16,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+              },
+              1550: {
+                slidesPerView: 3,
+                spaceBetween: 24,
               },
             },
             navigation: {
@@ -352,6 +400,19 @@ $(document).ready(function () {
           spaceBetween: 20,
         },
       },
+    });
+  }
+
+  if ($(".tabs-linkLink").length > 0) {
+    $(".tabs-linkLink a").on("click", function (event) {
+      event.preventDefault();
+      let parents = $(this).parents(".tabsSection");
+      let href = $(this).attr("href");
+
+      parents.find(".tabs-linkLink a").removeClass("active");
+      $(this).toggleClass("active");
+      parents.find(".tabsSlider").removeClass("opened");
+      $(href).addClass("opened");
     });
   }
 
