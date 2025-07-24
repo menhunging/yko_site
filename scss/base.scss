@@ -3,7 +3,7 @@ body {
   background-color: $colorWhite;
   color: $colorBlack;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 100%;
   font-weight: 400;
   font-variant-ligatures: none;
 
@@ -916,12 +916,17 @@ section {
 
   @include responsive1199 {
     margin-left: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   @include responsive767 {
   }
 
   li {
+    @include responsive1199 {
+      width: 50%;
+    }
   }
 
   a {
@@ -936,6 +941,10 @@ section {
       padding: 10px 30px 14px;
       font-size: 14px;
       line-height: 30px;
+    }
+
+    @include responsive389 {
+      font-size: 12px;
     }
 
     &.active {
@@ -956,7 +965,7 @@ section {
   border: solid 1px $colorBlack;
   border-radius: 30px;
 
-  @include responsive767{
+  @include responsive767 {
     width: 100%;
     justify-content: center;
   }

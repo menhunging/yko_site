@@ -160,28 +160,38 @@
       color: $colorGray;
     }
   }
+}
 
-  .our-villages-slider__title {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: $colorGray;
+.our-villages-slider__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $colorGray;
 
-    @include responsive767 {
-      font-size: 9px;
-      line-height: 12px;
-    }
+  @include responsive1439 {
+    font-size: 12px;
+    line-height: 14px;
   }
 
-  .our-villages-slider__data {
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 32px;
+  @include responsive767 {
+    font-size: 9px;
+    line-height: 12px;
+  }
+}
 
-    @include responsive1199 {
-      font-size: 19px;
-      line-height: 24px;
-    }
+.our-villages-slider__data {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 32px;
+
+  @include responsive1549 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @include responsive1199 {
+    font-size: 19px;
+    line-height: 24px;
   }
 }
 
@@ -268,8 +278,8 @@
 .our-villages-slider-content__data {
   font-weight: 400;
   font-size: 33px;
-  line-height: 30px;
-  min-height: 30px;
+  line-height: 35px;
+  min-height: 35px;
   display: flex;
   align-items: center;
   position: relative;
@@ -277,7 +287,7 @@
 
   @include responsive1549 {
     position: relative;
-    top: -3px;
+    top: -1px;
   }
 
   @include responsive1199 {

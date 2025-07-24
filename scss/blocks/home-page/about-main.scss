@@ -6,6 +6,7 @@
 
   @include responsive767 {
     border-radius: 30px;
+    padding: 10px 0 30px;
   }
 
   .about-main__numbers {
@@ -68,6 +69,7 @@
       }
 
       @include responsive1023 {
+        gap: 4px;
       }
 
       &:last-child {
@@ -92,7 +94,7 @@
       }
 
       @include responsive767 {
-        font-size: 40px;
+        font-size: 45px;
         line-height: 50px;
       }
 
@@ -131,6 +133,10 @@
   flex-direction: column;
   gap: 20px;
   position: relative;
+
+  @include responsive767 {
+    gap: 15px;
+  }
 
   .caption {
   }
@@ -229,7 +235,11 @@
         @include responsive767 {
           font-size: 12px;
           line-height: 16px;
-          max-width: 50%;
+          max-width: 78%;
+        }
+
+        @include responsive389 {
+          max-width: 68%;
         }
       }
     }

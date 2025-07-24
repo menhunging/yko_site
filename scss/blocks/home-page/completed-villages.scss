@@ -95,12 +95,13 @@
     transform: translateX(-221px);
 
     @include responsive1549 {
-      width: 395px;
+      width: 455px;
       min-height: 500px;
     }
 
     @include responsive1439 {
       gap: 15px;
+      width: 390px;
     }
 
     @include responsive1199 {

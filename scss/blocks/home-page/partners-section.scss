@@ -1,5 +1,13 @@
 .partners-section {
   overflow: hidden;
+
+  .section-title {
+    .swiper-controls {
+      @include responsive767 {
+        display: none;
+      }
+    }
+  }
 }
 
 .partners-slider {
@@ -10,11 +18,11 @@
     margin-top: 60px;
   }
 
-  @include responsive1199{
+  @include responsive1199 {
     margin-top: 30px;
   }
 
-  @include responsive767{
+  @include responsive767 {
     margin-top: 20px;
   }
 
@@ -23,7 +31,7 @@
     height: 183px;
     filter: grayscale(1);
 
-    @include responsive1549{
+    @include responsive1549 {
       height: 140px;
     }
   }
@@ -38,5 +46,16 @@
     img {
       object-fit: contain;
     }
+  }
+}
+
+.partners-slider__contriols--mobile {
+  display: none;
+
+  @include responsive767 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
   }
 }

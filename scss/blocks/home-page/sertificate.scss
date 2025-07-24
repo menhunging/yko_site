@@ -17,6 +17,9 @@
     }
 
     .swiper-controls {
+      @include responsive767 {
+        display: none;
+      }
     }
   }
 
@@ -140,5 +143,15 @@
     @include responsive767 {
       max-width: 80%;
     }
+  }
+}
+
+.sertificate-mobile {
+  display: none;
+
+  @include responsive767 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
 }

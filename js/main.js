@@ -73,7 +73,7 @@ $(document).ready(function () {
         },
         1800: {
           slidesPerView: 2,
-          spaceBetween: 329,
+          spaceBetween: 160,
         },
       },
     });
